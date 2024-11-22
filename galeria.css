@@ -1,0 +1,127 @@
+/* Reiniciar algunos estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente la barra */
+  align-items: center;     /* Alinear elementos verticalmente */
+  height: 60px;
+  background-color: #333;
+}
+
+/* Estilos de los enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+body {
+  font-size: 16px;
+  font-family: "Cantata One", serif;
+  font-weight: 1000%;
+  font-style: normal;
+      
+    background:rgb(140, 187, 211);
+  }
+  .nav-bg{
+    background-color: var(--colorpricipal);  
+   }
+   .navegacion-principal{
+     display: flex;
+     justify-content: space-between;
+   }
+  img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height:300;
+    
+  }
+  h2 {
+    margin-bottom: 3rem;
+    font-weight: flex;
+    color: brown;
+    text-align: center;
+  }
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 3fr));
+    grid-gap: 2em;
+  }
+  
+  
+  /* hover styles */
+  .location-listing {
+    position: relative;
+  }
+  
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .location-image img {
+    filter: red(0px);
+    transition: filter 0.7s ease-in;
+    transform: scale(1.1);
+  }
+  
+  .location-title {
+    font-size: 1.6em;
+    font-weight: center;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .1s;
+    background: rgb(186, 154, 154);
+    color: rgb(0, 0, 0);
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-listing:hover .location-title {
+    opacity: 5;
+  }
+  
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+  
+  
+  /* for touch screen devices */
+  @media (hover: none) { 
+    .location-title {
+      opacity: 1;
+    }
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+
